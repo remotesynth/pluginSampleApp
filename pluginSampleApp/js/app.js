@@ -47,6 +47,9 @@ angular.module('pluginSampleApp', ['ionic', 'ui.router'])
 .controller('ImageCtrl', function($scope) {
     // $scope.imageURL = 'https://45.media.tumblr.com/ff06c2c5c03293265f24d8721571eee4/tumblr_n6r8b62SJC1tbhzz6o1_400.gif';
     $scope.imageURL = scannedURL;
+    $scope.share = function() {
+        plugins.socialsharing.share(null, null, scannedURL);
+    }
 })
 
 .run(function($ionicPlatform) {
