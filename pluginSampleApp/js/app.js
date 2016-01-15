@@ -18,7 +18,6 @@ angular.module('pluginSampleApp', ['ionic', 'ui.router'])
 })
 
 .controller('PluginCtrl', function($scope, $state) {
-    $scope.foo = "bar";
     // open the barcode scanner
     $scope.openBarcode = function() {
         cordova.plugins.barcodeScanner.scan(
@@ -58,4 +57,4 @@ angular.module('pluginSampleApp', ['ionic', 'ui.router'])
       StatusBar.styleDefault();
     }
   });
-})
+});
