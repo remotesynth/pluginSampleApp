@@ -1,3 +1,5 @@
+var scannedURL;
+
 angular.module('pluginSampleApp', ['ionic', 'ui.router'])
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -10,28 +12,21 @@ angular.module('pluginSampleApp', ['ionic', 'ui.router'])
     .state('viewimage', {
       url: '/viewimage',
       templateUrl: 'templates/viewImage.html',
-      controller: 'PluginCtrl'
+      controller: 'ImageCtrl'
     });
     $urlRouterProvider.otherwise('/app');
 })
 
 .controller('PluginCtrl', function($scope, $state) {
+    $scope.foo = "bar";
     // open the barcode scanner
     $scope.openBarcode = function() {
         cordova.plugins.barcodeScanner.scan(
 
             // success callback function
             function (result) {
-                //https://45.media.tumblr.com/ff06c2c5c03293265f24d8721571eee4/tumblr_n6r8b62SJC1tbhzz6o1_400.gif
-                $scope.imageURL = 'https://45.media.tumblr.com/ff06c2c5c03293265f24d8721571eee4/tumblr_n6r8b62SJC1tbhzz6o1_400.gif';
+                scannedURL = result.text;
                 $state.go('viewimage');
-                // wrapping in a timeout so the dialog doesn't free the app
-                //setTimeout(function() {
-                //    alert("We got a barcode\n" +
-                //          "Result: " + result.text + "\n" +
-                //          "Format: " + result.format + "\n" +
-                //          "Cancelled: " + result.cancelled);                            
-                //}, 0);
             },
 
             // error callback function
@@ -47,6 +42,11 @@ angular.module('pluginSampleApp', ['ionic', 'ui.router'])
          );
         
     };
+})
+
+.controller('ImageCtrl', function($scope) {
+    // $scope.imageURL = 'https://45.media.tumblr.com/ff06c2c5c03293265f24d8721571eee4/tumblr_n6r8b62SJC1tbhzz6o1_400.gif';
+    $scope.imageURL = scannedURL;
 })
 
 .run(function($ionicPlatform) {
