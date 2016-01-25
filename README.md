@@ -5,33 +5,31 @@ Sample project for the _Cordova Plugins in Action_ workshop at [PhoneGap Day 201
 ## Links
 
 * [This workshop’s slide deck](https://docs.google.com/presentation/d/17ZpdDpEDp6YOhhrUqNq6gix5C_hXpB3PUzghkdsR2ys/)
-* [Telerik Verified Plugins Marketplace](http://plugins.telerik.com/cordova)
-* [Telerik Platform](http://telerik.com/platform)
 
-# Workshop Directions
+## Workshop Directions
 
 ## Requirements
 
 1. Sign up for a free, 30-day trial of the [Telerik Platform](https://platform.telerik.com).
-2. [Download/install the “Desktop Client - Universal”](https://platform.telerik.com/appbuilder/webclient/#/downloads) for your OS X or Windows development machine.
-3. Download the [AppBuilder Companion App](http://www.telerik.com/platform/appbuilder/companion-app) for your iOS, Android or Windows Phone device from the marketplace
+2. [Download/install the “Desktop Client - Universal”](https://platform.telerik.com/appbuilder/webclient/#/downloads) for your OSX or Windows development machine.
+3) Download the [AppBuilder Companion App](http://www.telerik.com/platform/appbuilder/companion-app) for your iOS, Android or Windows Phone device from the marketplace
 
 ## Getting Started
 
-1. Open the AppBuilder Desktop Client on your desktop.
+1. Open AppBuilder on your desktop.
 1. Click the "Create App" button
 	
 	![Create App](images/createapp.png)
 1. Choose "Advanced"
 	
 	![Advanced](images/advanced.jpg)
-1. Select the "Clone repository" option and enter `https://github.com/remotesynth/pluginSampleApp` as the repository URI and then click "Create App"
-1. After the project loads, it will initially open to the project's "master" branch, which contains the workshop's completed code. You can [refer to this code](https://github.com/remotesynth/pluginSampleApp) at any time if you get stuck, but this workshop starts on the project's "starter" branch. To switch branches, go to "Version Control" > "Branches"
+1. Select the "clone repository" option and enter `https://github.com/remotesynth/pluginSampleApp` as the repository URI and then click "Create App"
+1. After the project loads, it will initially open the completed project branch. To switch to the starter project branch, go to "Version Control" > "Branches"
 
 	![Version Control](images/branches.jpg)
 1. Select the "starter" branch and click "Checkout." This will switch your project to the version of the code that we will begin working with.
 
-	![Starter branch](images/starter.jpg)
+	![Starter branch](starter.png)
 1. To return to your project click the project name next to "Dashboard" on the top of the AppBuilder window (it will most likely be "pluginSampleApp" if you left the default name)
 
 ### The Sample Application
@@ -41,7 +39,7 @@ Our sample application is built with Ionic (and AngularJS). Right now, if you we
 
 The goal of our sample application will be to leverage several Cordova plugins (namely a barcode scanner, social sharing and local notification). The UI for this application will be very simple and consist of only two views.
 
-We will be leveraging the [AppBuilder Companion App](http://www.telerik.com/platform/appbuilder/companion-app) throughout this process to allow us to test our app on devices without needing to deploy the app to a phone. It will also allow us to update our app on our devices quickly. Most importantly, for the purposes of this workshop, it allows us to leverage the plugins we discussed without needing to build and deploy the full application package to a phone.
+We will be leveraging the [AppBuilder Companion App](http://www.telerik.com/platform/appbuilder/companion-app) throughout this process to allow us to test our app on devices without needing to deploy the app to a phone. It will also allow us to update our app on our devices quickly. Most importantly, for the purposes of this workshop, it allows us to leverage the plugins we discussed without needing to build and deploy the app to a phone.
 
 Let's get started.
 
@@ -51,7 +49,7 @@ Let's get started.
 
 The barcode scanner will be trigger by a button, so let's add one to our app.
 
-1. Open templates/home.html in AppBuilder.
+1. Open template/home.html in AppBuilder.
 1. Place a button in between the `<ion-content>` tags.
 	
 		<button class="button button-block button-positive" ng-click="openBarcode()">
@@ -59,11 +57,11 @@ The barcode scanner will be trigger by a button, so let's add one to our app.
 		</button>
 1. Save the file.
 1. Open js/app.js in AppBuilder.
-1. Find the `PluginCtrl` for this view. It looks like this:
+1. First, let's create the controller `PluginCtrl` that was specified for this view by adding the following lines in between the current `.config()` and `.run()` blocks:
 	
 		.controller('PluginCtrl', function($scope, $state) {
 		})
-1. Take the sample code from the [BarcodeScanner page](http://plugins.telerik.com/cordova/plugin/barcodescanner) and place it within the `PluginCtrl` controller, defining it as `openBarcode` within our `$scope`:
+1. Take the sample code from the [BarcodeScanner page] and place it within our controller, defining it as `openBarcode` within our `$scope`:
 		
 		// open the barcode scanner
     	$scope.openBarcode = function() {
@@ -98,7 +96,7 @@ The barcode scanner will be trigger by a button, so let's add one to our app.
 Now let's test our app so far by building and deploying it to the [AppBuilder Companion App](http://www.telerik.com/platform/appbuilder/companion-app).
 
 1. Select Run > Build (Cmd/Ctrl + B)
-1. Choose your device type (iOS, Android, or Windows Phone), select the "AppBuilder Companion App" option, and then click next.
+1. Choose your device type and select the "AppBuilder Companion App" option and then click next.
 
 	![Build](images/build.jpg)
 1. Open the AppBuilder Companion App on your device and open the QR scanner to scan the QR code that is produced by AppBuilder.
@@ -142,7 +140,7 @@ Success! We're ready for the app store! But before we get that far, our UX "expe
 		  templateUrl: 'templates/viewImage.html',
 		  controller: 'ImageCtrl'
 		});
-1. Within the `PluginCtrl` code, replace the contents of the success callback function (the one with the `// success callback function` comment above it) to set the result of the barcode scan to a variable and move to the `viewimage` state.
+1. Within the `PluginCtrl` code, replace the contents of the success callback handler to set the result of the barcode scan to a variable and move to the `viewimage` state.
 
 		scannedURL = result.text;
 		$state.go('viewimage');
@@ -155,7 +153,7 @@ Success! We're ready for the app store! But before we get that far, our UX "expe
 
 We're ready to test our changes in the AppBuilder Companion App.
 
-1. Within the AppBuilder Companion App, do a 3-finger tap and hold, which should trigger the updated code to be dowloaded and installed (or use the notification option for "LiveSync" if you're on Android).
+1. Within the AppBuilder Companion App, do a 3-finger tap and hold, which should trigger the updated code to be dowloaded and installed (or use the notfication option for "LiveSync").
 1. Click the "Open Barcode Scanner" button and scan the barcode from earlier and bask in the glory!
 
 	![Awesome](images/viewimage.jpg)
@@ -184,14 +182,17 @@ Clearly, our app is awesome already. Nonetheless, if you have the time, let's tr
 
 ## Add the LocalNotification Plugin (Optional)
 
-If you added the SocialSharing plugin, your app is already more awesomer. But you know what would make it the most awesomerest would be if it notified me that I successfully shared the image. To do that, we're going to use the [LocalNotification](http://plugins.telerik.com/cordova/plugin/localnotification) plugin written by Sebastián Katzer. Try doing this on your own, but feel free to reference the instructions below if you get stuck.
+**Note: In testing this workshop, we encountered an issue with LocalNotification within th AppBuilder Companion App on iOS. If you are testing on iOS, please skip to the [next section](#toast).
+
+If you added the SocialSharing plugin, your app is already more awesomer. But you know what would make it the most awesomerest would be if it notified me that I successfully shared the image. To do that, we're going to use the [LocalNotification](http://plugins.telerik.com/cordova/plugin/localnotification) written by Sebastián Katzer. Try doing this on your own, but feel free to reference 
+the instructions below if you get stuck.
 
 1. In js/app.js, we need to add a callback function to the social sharing plugin call that will trigger our nofication. Edit the existing social sharing call to add this callback.
 
 		plugins.socialsharing.share(null, null, scannedURL, null, function() {
 		   // called when the image is shared
 		});
-1. Paste the code below within the callback you just created. The code configures the notification plugin's options. Set the `at` option to right now (`new Date()` resolves to the current time), and add the `text` and `title` of your notification (for more detail on the other options, check the [documentation](http://plugins.telerik.com/cordova/plugin/localnotification) for this plugin)
+1. Set the options for the notification plugin. Set the `at` option to essentially right now and add the `text` and `title` of your notification (for more detail on the other options, check the [documentation](http://plugins.telerik.com/cordova/plugin/localnotification) for this plugin)
 
 		var options = {
 			id:         1,
@@ -200,10 +201,35 @@ If you added the SocialSharing plugin, your app is already more awesomer. But yo
 			title:      "You shared the image",
 			autoClear:  true
 		};
-1. Paste the code below right beneath the `options` initialization to call the notification plugin.
+1. Now just call the notification plugin, passing in our `options`.
 
 		cordova.plugins.notification.local.schedule(options);
 1. Save app.js.
 1. Refresh the app in the AppBuilder Companion App, scan the QR code, share the image and be completely blown away by the awesomeness of your notification!
 
 	![notification](images/notification.jpg)
+
+<a name="toast"></a>
+## Add the Toast Plugin (Optional)
+
+Prefer a toast popup notification to make your app most awesomerest? You're in luck. Let's use the [Toast](http://plugins.telerik.com/cordova/plugin/toast) written by Eddy Verbruggen. Try doing this on your own, but feel free to reference 
+the instructions below if you get stuck.
+
+1. In js/app.js, we need to add a callback function to the social sharing plugin call that will trigger our nofication. Edit the existing social sharing call to add this callback.
+
+		plugins.socialsharing.share(null, null, scannedURL, null, function() {
+		   // called when the image is shared
+		});
+1. Within this callback, we call the plugin with the text we'd like to put in the toast notification.
+
+		window.plugins.toast.showWithOptions(
+			{
+			message: "You shared the image. Your friends will thank you.",
+			duration: "short",
+			position: "bottom"
+			}
+		);
+1. Save app.js.
+1. Refresh the app in the AppBuilder Companion App, scan the QR code, share the image and be bask in the glow of your notification glory!
+
+	![toast](images/toast.jpg)
