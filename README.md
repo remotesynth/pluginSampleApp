@@ -19,14 +19,14 @@ Sample project for the _Cordova Plugins in Action_ workshop at [PhoneGap Day 201
 1. Open AppBuilder on your desktop.
 1. Click the "Create App" button
 	
-	![Create App](createapp.png)
+	![Create App](images/createapp.png)
 1. Choose "Advanced"
 	
-	![Advanced](advanced.png)
+	![Advanced](images/advanced.jpg)
 1. Select the "clone repository" option and enter `https://github.com/remotesynth/pluginSampleApp` as the repository URI and then click "Create App"
 1. After the project loads, it will initially open the completed project branch. To switch to the starter project branch, go to "Version Control" > "Branches"
 
-	![Version Control](branches.png)
+	![Version Control](images/branches.jpg)
 1. Select the "starter" branch and click "Checkout." This will switch your project to the version of the code that we will begin working with.
 
 	![Starter branch](starter.png)
@@ -98,21 +98,21 @@ Now let's test our app so far by building and deploying it to the [AppBuilder Co
 1. Select Run > Build (Cmd/Ctrl + B)
 1. Choose your device type and select the "AppBuilder Companion App" option and then click next.
 
-	![Build](build.png)
+	![Build](images/build.jpg)
 1. Open the AppBuilder Companion App on your device and open the QR scanner to scan the QR code that is produced by AppBuilder.
 	>Note: You may need to do a two finger swipe from the left side of the device to open the menu (or use the notification) to find the scan option.
 1. Once the app loads, click the "Open Barcode Scanner" button and scan the following QR code:
 
-	![qr code](qrcode.png)
+	![qr code](images/qrcode.png)
 1. When the barcode successfully scans, you should receive a dialog box telling you the results of the scan.
 
-	![success](app_v1.png)
+	![success](images/app_v1.jpg)
 
 Success! We're ready for the app store! But before we get that far, our UX "expert" says that just alerting the URL isn't enough. Ok, Mr. Fancypants, we'll fix it.
 
 1. Create a new view template by right-clicking on the templates folder and selecting "Add" > "New File"
 
-	![New File](newfile.png)
+	![New File](images/newfile.jpg)
 1. Name your new template "viewImage.html"
 1. Replace the default HTML with the following Ionic view:
 
@@ -156,7 +156,7 @@ We're ready to test our changes in the AppBuilder Companion App.
 1. Within the AppBuilder Companion App, do a 3-finger tap and hold, which should trigger the updated code to be dowloaded and installed (or use the notfication option for "LiveSync").
 1. Click the "Open Barcode Scanner" button and scan the barcode from earlier and bask in the glory!
 
-	![Awesome](viewimage.png)
+	![Awesome](images/viewimage.jpg)
 
 ## Add the SocialSharing Plugin (Optional)
 
@@ -178,7 +178,7 @@ Clearly, our app is awesome already. Nonetheless, if you have the time, let's tr
 1. Save app.js
 1. Reload the app in the AppBuilder Companion App, scan the QR code, click the "share" button and impress your friends with your wicked app development skills!
 
-	![SocialSharing](socialsharing.png)
+	![SocialSharing](images/socialsharing.jpg)
 
 ## Add the LocalNotification Plugin (Optional)
 
@@ -205,4 +205,4 @@ the instructions below if you get stuck.
 1. Save app.js.
 1. Refresh the app in the AppBuilder Companion App, scan the QR code, share the image and be completely blown away by the awesomeness of your notification!
 
-	![notification](notification.png)
+	![notification](images/notification.jpg)
