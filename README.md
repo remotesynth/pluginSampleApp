@@ -5,14 +5,16 @@ Sample project for the _Cordova Plugins in Action_ workshop at [PhoneGap Day 201
 ## Links
 
 * [This workshop’s slide deck](https://docs.google.com/presentation/d/17ZpdDpEDp6YOhhrUqNq6gix5C_hXpB3PUzghkdsR2ys/)
+* [Telerik Verified Plugins Marketplace](http://plugins.telerik.com/cordova)
+* [Telerik Platform](http://telerik.com/platform)
 
-## Workshop Directions
+# Workshop Directions
 
 ## Requirements
 
 1. Sign up for a free, 30-day trial of the [Telerik Platform](https://platform.telerik.com).
 2. [Download/install the “Desktop Client - Universal”](https://platform.telerik.com/appbuilder/webclient/#/downloads) for your OSX or Windows development machine.
-3) Download the [AppBuilder Companion App](http://www.telerik.com/platform/appbuilder/companion-app) for your iOS, Android or Windows Phone device from the marketplace
+3. Download the [AppBuilder Companion App](http://www.telerik.com/platform/appbuilder/companion-app) for your iOS, Android or Windows Phone device from the marketplace
 
 ## Getting Started
 
