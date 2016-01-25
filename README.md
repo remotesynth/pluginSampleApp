@@ -182,7 +182,7 @@ Clearly, our app is awesome already. Nonetheless, if you have the time, let's tr
 
 ## Add the LocalNotification Plugin (Optional)
 
-**Note: In testing this workshop, we encountered an issue with LocalNotification within th AppBuilder Companion App on iOS. If you are testing on iOS, please skip to the [next section](#toast).
+**Note: In testing this workshop, we encountered an issue with LocalNotification within th AppBuilder Companion App on iOS. If you are testing on iOS, please skip to the [next section](#toast).**
 
 If you added the SocialSharing plugin, your app is already more awesomer. But you know what would make it the most awesomerest would be if it notified me that I successfully shared the image. To do that, we're going to use the [LocalNotification](http://plugins.telerik.com/cordova/plugin/localnotification) written by Sebastián Katzer. Try doing this on your own, but feel free to reference 
 the instructions below if you get stuck.
