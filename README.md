@@ -233,3 +233,11 @@ the instructions below if you get stuck.
 1. Refresh the app in the AppBuilder Companion App, scan the QR code, share the image and be bask in the glow of your notification glory!
 
 	![toast](images/toast.jpg)
+
+## Next Steps
+
+Congratulations! You’ve completed the Cordova Plugins in Action workshop.
+
+If you still have time, look over the [list of Cordova plugins supported in the AppBuilder companion app](http://docs.telerik.com/platform/appbuilder/cordova/run-companion/limitations-companion-app#telerik-verified-plugins-in-the-companion-app) and try to add a few to your app—[Flashlight](http://plugins.telerik.com/cordova/plugin/flashlight) and [ActionSheet](http://plugins.telerik.com/cordova/plugin/actionsheet) are two of our favorites to play with.
+
+If you’ve enjoyed using Telerik AppBuilder and want to learn more, try out the [Telerik Platform interactive tutorials](http://docs.telerik.com/platform/help/getting-started/run-demo-app). You’ll learn more about the tooling the Telerik Platform provides, and build a few more apps in the process.
