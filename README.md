@@ -60,7 +60,7 @@ The barcode scanner will be trigger by a button, so let's add one to our app.
 
 1. Do a search for "Barcode", click on the "BarcodeScanner" plugin in the list, and then click on the blue "Install" button.
 
-	![Barcode install](barcode-scanner.png)
+	![Barcode install](images/barcode-scanner.png)
 1. Open templates/home.html in AppBuilder.
 1. Place a button in between the `<ion-content>` tags.
 	
