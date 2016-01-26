@@ -174,6 +174,7 @@ We're ready to test our changes in the AppBuilder Companion App.
 
 Clearly, our app is awesome already. Nonetheless, if you have the time, let's try adding the [SocialSharing plugin](http://plugins.telerik.com/cordova/plugin/socialsharing), written by Eddy Verbruggen, to make it even more awesomer! You should try doing this yourself, but feel free to reference the instructions below if you get stuck.
 
+1. Install the "SocialSharing" plugin in the app using the "Plugins" option in the Project Navigator. Refer back to the steps used to install the barcode scanner plugin if you get stuck.
 1. Open templates/viewImage.html
 1. Add a button underneath the image that people can click to share the image. This button will call the `share()` method within our controller (which we will create in a moment).
 
@@ -199,6 +200,7 @@ Clearly, our app is awesome already. Nonetheless, if you have the time, let's tr
 If you added the SocialSharing plugin, your app is already more awesomer. But you know what would make it the most awesomerest would be if it notified me that I successfully shared the image. To do that, we're going to use the [LocalNotification](http://plugins.telerik.com/cordova/plugin/localnotification) written by Sebastián Katzer. Try doing this on your own, but feel free to reference 
 the instructions below if you get stuck.
 
+1. Install the "LocalNotification" plugin in the app using the "Plugins" option in the Project Navigator. Refer back to the steps used to install the barcode scanner plugin if you get stuck.
 1. In js/app.js, we need to add a callback function to the social sharing plugin call that will trigger our nofication. Edit the existing social sharing call to add this callback.
 
 		plugins.socialsharing.share(null, null, scannedURL, null, function() {
@@ -227,6 +229,7 @@ the instructions below if you get stuck.
 Prefer a toast popup notification to make your app most awesomerest? You're in luck. Let's use the [Toast](http://plugins.telerik.com/cordova/plugin/toast) written by Eddy Verbruggen. Try doing this on your own, but feel free to reference 
 the instructions below if you get stuck.
 
+1. Install the "Toast" plugin in the app using the "Plugins" option in the Project Navigator. Refer back to the steps used to install the barcode scanner plugin if you get stuck.
 1. In js/app.js, we need to add a callback function to the social sharing plugin call that will trigger our nofication. Edit the existing social sharing call to add this callback.
 
 		plugins.socialsharing.share(null, null, scannedURL, null, function() {
