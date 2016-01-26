@@ -31,7 +31,7 @@ Sample project for the _Cordova Plugins in Action_ workshop at [PhoneGap Day 201
 	![Version Control](images/branches.jpg)
 1. Select the "starter" branch and click "Checkout." This will switch your project to the version of the code that we will begin working with.
 
-	![Starter branch](images/starter.png)
+	![Starter branch](images/starter.jpg)
 1. To return to your project click the project name next to "Dashboard" on the top of the AppBuilder window (it will most likely be "pluginSampleApp" if you left the default name)
 
 ### The Sample Application
